@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sports-time</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sports-time</h1>
+
+    <div class="main-content">
+      <aside class="sidebar">
+        <h2>European Teams</h2>
+        <div class="league-filter">
+          <select id="leagueFilter" onchange="filterTeams()">
+            <option value="all">All Leagues</option>
+            <option value="premier-league">Premier League</option>
+            <option value="la-liga">La Liga</option>
+            <option value="bundesliga">Bundesliga</option>
+            <option value="serie-a">Serie A</option>
+            <option value="ligue-1">Ligue 1</option>
+            <option value="champions-league">Champions League</option>
+          </select>
+        </div>
+        <div class="teams-list" id="teamsList">
+          <!-- Teams will be populated by JavaScript -->
+        </div>
+      </aside>
+
+      <main class="chat-section">
+        <h2>Chat with AI</h2>
+        <div class="chat-container">
+          <div id="chat-messages" class="messages"></div>
+          <div class="input-container">
+            <input type="text" id="userMessage" placeholder="Ask about football..." class="message-input">
+            <button onclick="sendMessage()" class="send-btn">Send</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
